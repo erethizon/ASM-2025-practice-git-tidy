@@ -5,7 +5,15 @@ output: html_document
 
 ## Try with some real data
 Your turn. See if you can:
+
 1. Read in the file called `trapping_data.csv` 
+Need to make sure you have the proper packages turned on.
+
+```{r}
+library(tidyverse) #for tidying data
+library(here) #for helping with file paths
+```
+
 
 ```{r}
 trap_data <- read_csv(here("Data/trapping_data.csv"))
@@ -41,3 +49,44 @@ You will use:
 - `git push` OR
 - `git push origin main`
  in a desktop client or in the RStudio terminal window
+ 
+7. Read in the file called `trapping_data1.csv` 
+
+```{r}
+trap_data2 <- read_csv(here("Data/trapping_data1.csv"))
+```
+
+
+8. Inspect the data. Is it tidy? Write yourself some notes about your answer.
+
+These data are less tidy than they could be. While Groud_or_Tree seems to be one observation per row, the 3 columnd Pine, Hemlock, and Deciduous are likely intended to describe the habitat, and could be more tidy if they were recast into a longer format.
+
+9. Cast the data so that instead of columns called "Pine", "Deciduous" and "Hemlock" there is one column called "Habitat" Put the values from those 3 columns into a new column called "Animal_wt_g".
+
+This time, we'll save the recast data as a new object called `new_data`
+```{r}
+new_data <- pivot_longer(
+  trap_data2, #dataset to be pivoted
+  cols = Pine:Deciduous, #identify the columns that need to be cast
+  names_to = "Habitat", #identify the name for the new column that will take all the course names
+  values_to = "Animal_wt_g") #identify the name for the column in which the values will be stored)
+```
+
+Notice that it works, but not as nicely as if you had set the data up in a tidy format to begin with in your spreadsheet software.
+
+10. Comment your code appropriately as you work.
+
+11. Make a few commits as you work.
+You will use:
+- `git add practice-tidy-git.Rmd`
+- `git commit -m "my commit message" `
+in a desktop client or in the RStudio terminal window
+
+12. Push your changes to your github repo.
+You will use:
+- `git push` OR
+- `git push origin main`
+ in a desktop client or in the RStudio terminal window
+
+
+
