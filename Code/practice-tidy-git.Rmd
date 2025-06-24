@@ -5,3 +5,103 @@ output: html_document
 
 ## Let's apply what we've learned!
 
+Let's set up the workspace
+
+```{r, include=FALSE}
+rm(list = ls()) #clears RStudio environment for a fresh start
+library(tidyverse) #turns on all tidyverse packages; must be installed with install.packages("tidyverse) first time
+library(here) #turns on here "pointer" package; must be installed with install.packages("here") first time
+```
+
+Let's read in some data sets
+
+```{r}
+not_tidy1 <- read_csv(here("Data/not_tidy1.csv"))
+not_tidy2 <- read_csv(here("Data/not_tidy2.csv"))
+not_tidy3 <- read_csv(here("Data/not_tidy3.csv"))
+our_tidy_data <- read_csv(here("Data/our_tidy_data.csv"))
+```
+
+## Interpret
+What problems do you see in `not_tidy1`? Write them here:
+
+
+
+
+
+\
+\
+After you write the problems you identify in lines 27 - 31, use git to **add** and **commit** your changes!
+Then try to **push** your changes, and check to see that they are transferred to your github repo!
+
+\
+
+What problems do you see in `not_tidy2`? Write them here:
+
+
+
+
+
+\
+\
+After you write the problems you identify in lines 40-44, use git to **add** and **commit** your changes!
+Do you notice any changes in your github repo?
+
+\
+\
+What problems do you see in `not_tidy3`? Write them here:
+
+
+
+
+
+\
+\
+
+After you write the problems you identify in lines 53-57, use git to **add** and **commit** your changes!
+Then try to **push** your changes, and check to see that they are transferred to your github repo!
+\
+
+## How do I fix it?
+We see that both `not_tidy2` and `not_tidy3` have all of the same information as
+`our_tidy_data` but not the same structure.
+
+We call `our_tidy_data` a "long" format, vs. the "wide" format of `not_tidy2` and `not_tidy3`.
+
+Fortunately, it is easy to move back and forth between long and wide format.
+So, if someone gave you data formatted as `not_tidy_2` or `not_tidy3` you could rearrange it from wide to long format.
+
+Sometimes, a particular statistical test also requires your data to be in a wide format. 
+
+Let's look at how to do it.
+
+### Change `not_tidy2` from wide to long format
+
+We use a function called `pivot_longer` from the `tidyr` package (`tidyr` is installed automatically with `library(tidyverse)`).
+
+Here's how it works:
+
+```{r}
+not_tidy2_long <- pivot_longer(
+  not_tidy2, #dataset to be pivoted
+  cols = Mammalogy:`English literature`, #identify the columns that need to be cast
+  names_to = "Course", #identify the name for the new column that will take all the course names
+  values_to = "Grade") #identify the name for the column in which the values will be stored)
+```
+
+Now see if you can cast `not_tidy_3` from wide to long into an object called `not_tidy_3_long`:
+
+
+
+What if we wanted to cast from long to wide? The process is similar.
+
+Let's try it!
+
+```{r}
+our_tidy_wide <- pivot_wider(
+  our_tidy_data, #data set name
+  names_from = Course, #variable that will be cast into more columns
+  values_from = Grade) #variable from which to take the values to put in the new columns
+```
+
+Starting to make sense?
