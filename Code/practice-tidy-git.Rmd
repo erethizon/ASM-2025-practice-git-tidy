@@ -110,14 +110,14 @@ Starting to make sense?
 Your turn. See if you can:
 1. Read in the file called `trapping_data.csv`
 2. Inspect the data. Is it tidy? Write yourself some notes about your answer.
-Cast the data so that instead of a columns called "Habitat", you have 3 new columns called "Pine", "Deciduous" and "Hemlock". Put the values from the column called "Animal_wt_g" into those 3 new columns.
-3. Comment your code appropriately as you work.
-4. Make a few commits as you work.
-5. Push your changes to your github repo.
-6. Read in the file called `trapping_data1.csv` 
-7. Inspect the data. Is it tidy? Write yourself some notes about your answer.
-8. Cast the data so that instead of columns called "Pine", "Deciduous" and "Hemlock" there is one column called "Habitat" Put the values from those 3 columns into a new column called "Animal_wt_g".
-9. Comment your code appropriately as you work.
-10. Make a few commits as you work.
-11. Push your changes to your github repo.
-12. Solutions are in the .Rmd file called `answer_key.Rmd` in the Code folder.
+3.Cast the data so that instead of a columns called "Habitat", you have 3 new columns called "Pine", "Deciduous" and "Hemlock". Put the values from the column called "Animal_wt_g" into those 3 new columns.
+4. Comment your code appropriately as you work.
+5. Make a few commits as you work.
+6. Push your changes to your github repo.
+7. Read in the file called `trapping_data1.csv` 
+8. Inspect the data. Is it tidy? Write yourself some notes about your answer.
+9. Cast the data so that instead of columns called "Pine", "Deciduous" and "Hemlock" there is one column called "Habitat" Put the values from those 3 columns into a new column called "Animal_wt_g".
+10. Comment your code appropriately as you work.
+11. Make a few commits as you work.
+12. Push your changes to your github repo.
+13. Solutions are in the .Rmd file called `answer_key.Rmd` in the Code folder.
