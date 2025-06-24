@@ -19,7 +19,7 @@ To clone this repository and use it in RStudio, do the following:
 <br>
 <br>
 
-2. In RStudio, choose the File menu, and then select **"New Project."** When the dialog box opens, be sure to select **"Version Control"** as your option.     
+2. **In RStudio**, choose the File menu, and then select **"New Project."** When the dialog box opens, be sure to select **"Version Control"** as your option.     
 <br>
 
 <img src="Images/create_project.png" width=500>     
