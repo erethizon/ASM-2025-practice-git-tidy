@@ -12,7 +12,7 @@ You should already have an account on github and have git installed locally on y
 
 To clone this repository and use it in RStudio, do the following:  
 
-1. Visit the repository website and find the green "Code" button. Click the down arrow, and **copy** the url that is displayed under HTTPS.     
+1. Visit the repository website and find the green "Code" button **(See up above on this page!)**. Click the down arrow, and **copy** the url that is displayed under HTTPS.     
 <br>     
      
 <img src="Images/clone_repo.png" width=700>.    
