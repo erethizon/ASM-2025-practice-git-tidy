@@ -105,3 +105,13 @@ our_tidy_wide <- pivot_wider(
 ```
 
 Starting to make sense?
+
+## Try with some real data
+Your turn. See if you can:
+1. Read in the file called `trapping_data.csv` 
+2. Inspect the data. Is it tidy? Write yourself some notes about your answer.
+3. Cast the data so that instead of a column called "Habitat" there are three columns called "Pine", "Deciduous" and "Hemlock". Put the values for "Animal_wt_g" in those new columns.
+4. Comment your code appropriately as you work.
+5. Make a few commits as you work.
+6. Push your changes to your github repo.
+7. Solutions are in the .Rmd file called `answer_key.Rmd` in the Code folder.

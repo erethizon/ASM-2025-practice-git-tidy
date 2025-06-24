@@ -1,0 +1,43 @@
+---
+title: "answer_key"
+output: html_document
+---
+
+## Try with some real data
+Your turn. See if you can:
+1. Read in the file called `trapping_data.csv` 
+
+```{r}
+trap_data <- read_csv(here("Data/trapping_data.csv"))
+```
+
+2. Inspect the data. Is it tidy? Write yourself some notes about your answer.
+
+The data are tidy. There is one row per observation and one observation per row. Hints that it is a tidy format include the fact that in the Habitat and "Ground_or_Tree" columns, the same information is repeated multiple times, for each observation.
+
+
+3. Cast the data so that instead of a column called "Habitat" there are three columns called "Pine", "Deciduous" and "Hemlock". Put the values for "Animal_wt_g" in those new columns.
+
+Here's how we do that without saving a new object, using something called "piping":
+
+```{r}
+trap_data |> pivot_wider(
+  names_from = Habitat, #make 3 new columns using names from Habitat column
+  values_from = Animal_wt_g) |> #spread values from Animal_wt_g into the 3 new columns
+  View() #open a view of the pivoted data
+```
+
+4. Comment your code appropriately as you work.
+5. Make a few commits as you work.
+
+You will use:
+- `git add practice-tidy-git.Rmd`
+- `git commit -m "my commit message" `
+in a desktop client or in the RStudio terminal window
+
+6. Push your changes to your github repo.
+
+You will use:
+- `git push` OR
+- `git push origin main`
+ in a desktop client or in the RStudio terminal window
