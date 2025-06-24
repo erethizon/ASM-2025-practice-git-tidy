@@ -5,3 +5,67 @@ output: html_document
 
 Let's create the datasets that were shown in the powerpoint associated with this workshop.
 
+First we'll make a few little data sets - the same ones that were in the powerpoint.
+
+Start by turning on the tidyverse set of packages
+```{r}
+#install.packages("tidyverse") #uncomment at start of line if you need to run this. Only run once.
+library(tidyverse)
+library(here) #helps with file paths
+```
+
+Create first not-tidy dataset and name it `not_tidy1`
+
+```{r}
+not_tidy1 <-tibble(student_names = c("Rosemary", "Andrew", "Chris", "Jane"), `course (mammalogy, ecology, english lit) grades` = NA)
+not_tidy1$`course (mammalogy, ecology, english lit) grades`[1]<- c("3.75, 2.75, 3.0")
+not_tidy1$`course (mammalogy, ecology, english lit) grades`[2]<- c("2.00, 2.25, NA")
+not_tidy1$`course (mammalogy, ecology, english lit) grades`[3]<- c("NA, 4.0, 1.5")
+not_tidy1$`course (mammalogy, ecology, english lit) grades`[4]<- c("4.0, 3.75, 4.0")
+View(not_tidy1)
+```
+
+Now save it
+```{r}
+write_csv(not_tidy1, here("Data/not_tidy1.csv"))
+```
+
+Now make second example and call it `not_tidy2`
+
+```{r}
+not_tidy2 <-tibble(`Student name` = c("Rosemary", "Andrew", "Chris", "Jane"),
+                   Mammalogy = c(3.25, 2.00, NA, 4.0),
+                   Ecology = c(2.75, 2.25, 4.0, 3.75),
+                   `English literature` = c(3.0, NA, 1.5, 4.0))
+#save
+write_csv(not_tidy2, here("Data/not_tidy2.csv"))
+```
+
+Now make 3rd example and call it `not_tidy3`
+
+```{r}
+not_tidy3 <- tibble(Course = c("Mammalogy", "Ecology", "English literature"),
+                    Rosemary = c(3.25, 2.75, 3.0),
+                    Andrew = c(2.00, 2.25, NA),
+                    Chris = c(NA, 4.0, 1.5),
+                    Jane = c(4.0, 3.75, 4.0))
+
+#save
+write_csv(not_tidy3, here("Data/not_tidy3.csv"))
+```
+
+And finally the tidy data! Name it `our_tidy_data`
+
+```{r}
+our_tidy_data <- tibble(
+  Student_name = c(rep("Rosemary", 3), 
+                   rep("Andrew", 3),
+                   rep("Chris", 3),
+                   rep("Jane", 3)),
+  Course = rep(c("Mammalogy", "Ecology", "English literature"),4),
+  Grade = c(3.25, 2.75, 3.00, 2.00, 2.25, NA, NA, 4.00, 1.50, 4.00, 3.75, 4.00))
+
+#save
+write_csv(our_tidy_data, here("Data/our_tidy_data.csv"))
+```
+
