@@ -9,7 +9,9 @@ Let's set up the workspace
 
 ```{r, include=FALSE}
 rm(list = ls()) #clears RStudio environment for a fresh start
-library(tidyverse) #turns on all tidyverse packages; must be installed with install.packages("tidyverse) first time
+
+library(tidyverse) #turns on all tidyverse packages; must be installed with install.packages("tidyverse") first time
+
 library(here) #turns on here "pointer" package; must be installed with install.packages("here") first time
 ```
 

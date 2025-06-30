@@ -82,7 +82,7 @@ Below I provide a guide to some terminal and git commands. You can get more deta
 Here's an overview of some basic terminal (bash) commands:
 
 | Command           | Function                                               |
-|----------------------------------|--------------------------------------|
+|-------------------|--------------------------------------------------------|
 | `pwd`             | prints working directory                               |
 | `cd` \[filepath\] | changes directory to specified path                    |
 | `cd ~`            | changes to home directory                              |
@@ -103,7 +103,7 @@ Here's an overview of some basic git commands:
 You need certain commands to configure git for your computer. Here's an overview:
 
 | Command | Function |
-|------------------------------------|------------------------------------|
+|----|----|
 | `git config -global user.name "your name"` | Sets the name that will be attached to your work |
 | `git config -global user.email "you@example.edu"` | Sets the email address that will be attached to your work |
 | `git config  -global color.ui.auto` | Enables some colorization of your git output |
@@ -114,7 +114,7 @@ You need certain commands to configure git for your computer. Here's an overview
 You will use other git commands for your day-to-day work. Here are some.
 
 | Command | Function |
-|--------------------------|----------------------------------------------|
+|----|----|
 | `git init` | Initializes tracking on the current directory |
 | `git init [project name]` | Creates a new local repository in a new directory called \[project name\] |
 | `git clone [project url]` | Downloads a project with the entire history from a remote repository |
