@@ -8,12 +8,9 @@ More specifically, this is a repository designed to allow participants to learn 
 project from the repo, work with a tidy dataset, track and commit changes and push them to their own github.
 
 ## Instructions
-You should already have an account on github and have git installed locally on your computer. Assuming that is the case:
-
 Remember that, since you did not create this repository, you will not only need to clone it, but will also need to tell git where to find your own version of it on github.
 
-To clone this repository and use it in RStudio:  
-
+You should already have an account on github and have git installed locally on your computer. Assuming that is the case, to clone this repository and use it in RStudio:  
 
 1. Create a new, empty repository on your own github account and name it the same thing as this repository (`ASM-2025-practice-git-tidy`). **DO NOT ADD A README FILE**
 
